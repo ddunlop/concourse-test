@@ -6,7 +6,7 @@ OUTDIR="$1"
 
 BASEDIR="`dirname $0`"
 
-BASE_REPO="`cd "$BASEDIR/../.." && pwd`"
+BASE_REPO="`cd "$BASEDIR/.." && pwd`"
 
 cd "$BASE_REPO"
 
