@@ -6,12 +6,10 @@ OUTDIR="$1"
 
 BASEDIR="`dirname $0`"
 
-BASE_REPO="`cd "$BASEDIR/.." && pwd`"
+BASE_REPO="`cd "$BASEDIR/../.." && pwd`"
 
 cd "$BASE_REPO"
 
 mkdir -p "$OUTDIR"
+pwd
 git rev-parse HEAD > "$OUTDIR/SHA"
-
-cd $OUTDIR
-cat SHA
