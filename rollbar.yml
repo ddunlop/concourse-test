@@ -1,0 +1,15 @@
+---
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: onemedical/onelife-script
+
+inputs:
+- name: concourse-test
+run:
+  path: concourse-test/deploy-scripts/rollbar.sh
+  args:
+  - git_metadata/TAG
+params:
+  ENVIRONMENT:
