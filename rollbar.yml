@@ -7,6 +7,7 @@ image_resource:
 
 inputs:
 - name: concourse-test
+- name: git_metadata
 run:
   path: concourse-test/deploy-scripts/rollbar.sh
   args:
