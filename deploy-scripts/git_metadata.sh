@@ -4,12 +4,16 @@ set -ex
 
 OUTDIR="$1"
 
-BASEDIR="`dirname $0`"
+# BASEDIR="`dirname $0`"
 
-BASE_REPO="`cd "$BASEDIR/.." && pwd`"
+# BASE_REPO="`cd "$BASEDIR/.." && pwd`"
 
-cd "$BASE_REPO"
+# cd "$BASE_REPO"
+
+cd ..
 
 mkdir -p "$OUTDIR"
 pwd
 git rev-parse HEAD > "$OUTDIR/SHA"
+
+find $OUTDIR
