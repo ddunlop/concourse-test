@@ -13,4 +13,5 @@ run:
   args:
   - ../git_metadata/SHA
 params:
+  ROLLBAR_ACCESS_TOKEN:
   ENVIRONMENT:

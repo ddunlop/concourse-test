@@ -17,3 +17,4 @@ jobs:
         file: concourse-test/rollbar.yml
         params:
           ENVIRONMENT: staging
+          ROLLBAR_ACCESS_TOKEN: test_token
