@@ -9,6 +9,6 @@ inputs:
 - name: concourse-test
 run:
   path: concourse-test/deploy-scripts/git_metadata.sh
-  args: [/git_metadata]
+  args: [git_metadata]
 outputs:
 - name: git_metadata
