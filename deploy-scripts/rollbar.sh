@@ -2,19 +2,15 @@
 
 set -ex
 
-echo "inside rollbar script"
-pwd
-echo $@
-echo "0: $0"
+REVISION_FILE=$1
+
 BASEDIR=`dirname $0`
 BASE_REPO=`realpath $BASEDIR/..`
 
-echo 
-echo "------"
-find /tmp
+REVISION_FULLPATH=`realpath $BASE_REPO/$REVISION_LOCATION`
 
-echo "------"
-
-SHAFILE=`realpath $BASE_REPO/$1`
-ls $SHAFILE
-cat $SHAFILE
+# curl -i -X POST https://api.rollbar.com/api/1/deploy/ \
+curl -i -X POST https://postman-echo.com/post \
+  -F "access_token=ROLLBAR_ACCESS_TOKEN" \
+  -F "environment=$ENVIRONMENT" \
+  -F "revision="$(cat $REVISION_FULLPATH)

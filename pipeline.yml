@@ -15,3 +15,5 @@ jobs:
         file: concourse-test/git_metadata.yml
       - task: rollbar
         file: concourse-test/rollbar.yml
+        params:
+          ENVIRONMENT: staging
