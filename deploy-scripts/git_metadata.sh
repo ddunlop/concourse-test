@@ -12,3 +12,6 @@ cd "$BASE_REPO"
 
 mkdir -p "$OUTDIR"
 git rev-parse HEAD > "$OUTDIR/SHA"
+
+cd $OUTDIR
+cat SHA

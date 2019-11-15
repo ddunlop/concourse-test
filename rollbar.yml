@@ -10,6 +10,6 @@ inputs:
 run:
   path: concourse-test/deploy-scripts/rollbar.sh
   args:
-  - ../../git_metadata/SHA
+  - /git_metadata/SHA
 params:
   ENVIRONMENT:
