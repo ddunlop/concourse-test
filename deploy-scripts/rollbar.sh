@@ -15,6 +15,6 @@ find /tmp
 
 echo "------"
 
-SHAFILE=`realpath $BASE_REPO/$1"
+SHAFILE=`realpath $BASE_REPO/$1`
 ls $SHAFILE
 cat $SHAFILE
