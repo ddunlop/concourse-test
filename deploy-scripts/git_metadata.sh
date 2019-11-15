@@ -4,6 +4,8 @@ set -ex
 
 OUTDIR="$1"
 
+pwd
+
 BASEDIR=`dirname $0`
 
 BASE_REPO=`realpath $BASEDIR/..`
