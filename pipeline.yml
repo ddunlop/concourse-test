@@ -11,7 +11,7 @@ jobs:
     public: true
     plan:
       - get: concourse-test
-      - task: tag
+      - task: git_metadata
         file: concourse-test/git_metadata.yml
       - task: rollbar
         file: concourse-test/rollbar.yml
