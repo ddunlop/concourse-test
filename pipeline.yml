@@ -11,7 +11,7 @@ jobs:
     plan:
       - get: concourse-git
       - task: git_metadata
-        file: concourse-test/git_metadata.yml
+        file: concourse-git/git_metadata.yml
       - task: rollbar
         file: concourse-git/rollbar.yml
         params:

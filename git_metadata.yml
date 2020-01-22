@@ -8,7 +8,7 @@ image_resource:
 inputs:
 - name: concourse-git
 run:
-  path: concourse-test/deploy-scripts/git_metadata.sh
+  path: concourse-git/deploy-scripts/git_metadata.sh
   args: [../git_metadata]
 outputs:
 - name: git_metadata
