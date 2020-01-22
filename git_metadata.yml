@@ -6,7 +6,7 @@ image_resource:
     repository: onemedical/onelife-script
 
 inputs:
-- name: concourse-test
+- name: concourse-git
 run:
   path: concourse-test/deploy-scripts/git_metadata.sh
   args: [../git_metadata]
