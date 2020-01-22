@@ -1,6 +1,6 @@
 ---
 resources:
-  - name: concourse-test
+  - name: concourse-git
     type: git
     source:
       uri: https://github.com/ddunlop/concourse-test.git
@@ -8,13 +8,12 @@ resources:
 
 jobs:
   - name: concourse-test
-    public: true
     plan:
-      - get: concourse-test
+      - get: concourse-git
       - task: git_metadata
         file: concourse-test/git_metadata.yml
       - task: rollbar
-        file: concourse-test/rollbar.yml
+        file: concourse-git/rollbar.yml
         params:
           ENVIRONMENT: staging
           ROLLBAR_ACCESS_TOKEN: test_token

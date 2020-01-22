@@ -6,7 +6,7 @@ image_resource:
     repository: onemedical/onelife-script
 
 inputs:
-- name: concourse-test
+- name: concourse-git
 - name: git_metadata
 run:
   path: concourse-test/deploy-scripts/rollbar.sh
